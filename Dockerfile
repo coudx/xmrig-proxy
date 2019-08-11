@@ -16,4 +16,4 @@ RUN apt-get purge -qq -y git ca-certificates \
     build-essential cmake libuv1-dev uuid-dev \
     libmicrohttpd-dev libssl-dev && apt-get clean  
  
-ENTRYPOINT ["/urs/local/bin/xmrig-proxy"]
+ENTRYPOINT ["xmrig-proxy"]
