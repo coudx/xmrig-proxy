@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install \
     
 RUN git clone ${REPO}
 RUN cd xmrig-proxy && cmake . \
- && make && cp xmrig-proxy /usr/local/bin/
+ && make && cp ./xmrig-proxy /usr/local/bin/
+RUN rm -rf xmrig-proxy
 
 RUN apt-get purge -qq -y git ca-certificates \
     build-essential cmake libuv1-dev uuid-dev \
